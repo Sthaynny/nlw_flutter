@@ -1,4 +1,3 @@
-import 'package:dev_quiz/app/feature/challenge/components/awnser/awser_widget.dart';
 import 'package:dev_quiz/app/shared/components/progress_indicator/progress_indicator.dart';
 import 'package:dev_quiz/core/core.dart';
 import 'package:flutter/material.dart';
