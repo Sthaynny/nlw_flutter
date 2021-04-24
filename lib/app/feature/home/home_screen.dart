@@ -1,3 +1,4 @@
+import 'package:dev_quiz/app/feature/challenge/challenge_screen.dart';
 import 'package:dev_quiz/app/feature/home/components/app_bar.dart';
 import 'package:dev_quiz/app/feature/home/components/level_button.dart';
 import 'package:dev_quiz/app/feature/home/components/quiz_card.dart';
@@ -60,6 +61,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: controller.quizzes!
                       .map(
                         (e) => QuizCardWidget(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ChalengeScreen(
+                                  listQuestions: e.questions,
+                                ),
+                              ),
+                            );
+                          },
                           title: e.title,
                           completed:
                               "${e.questionsAnswered} de ${e.questions.length}",

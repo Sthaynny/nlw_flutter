@@ -22,7 +22,6 @@ class HomeController {
     state = HomeState.loading;
     user = await repository.getUser();
     quizzes = await repository.getQuizzes();
-    print(quizzes);
     state = HomeState.sucess;
   }
 
