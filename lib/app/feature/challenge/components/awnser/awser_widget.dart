@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class AnserWidget extends StatelessWidget {
   final AwnserModel awnser;
   final bool isSelected;
-  final VoidCallback onTap;
+  final ValueChanged<bool> onTap;
   final disabled;
 
   const AnserWidget({
@@ -38,7 +38,7 @@ class AnserWidget extends StatelessWidget {
     return IgnorePointer(
       ignoring: disabled,
       child: GestureDetector(
-        onTap: onTap,
+        onTap: () => onTap(awnser.isRight),
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
           padding: EdgeInsets.all(16),

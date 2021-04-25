@@ -7,10 +7,10 @@ class QuizWidget extends StatefulWidget {
   const QuizWidget({
     Key? key,
     required this.question,
-    required this.onChange,
+    required this.onSelected,
   }) : super(key: key);
   final QuestionModel question;
-  final VoidCallback onChange;
+  final ValueChanged<bool> onSelected;
   @override
   _QuizWidgetState createState() => _QuizWidgetState();
 }
@@ -36,26 +36,17 @@ class _QuizWidgetState extends State<QuizWidget> {
             ),
             for (var i = 0; i < widget.question.awnser.length; i++)
               AnserWidget(
-                onTap: () {
+                onTap: (value) {
                   indexSelected = i;
                   setState(() {});
                   Future.delayed(Duration(seconds: 2)).then(
-                    (value) => widget.onChange(),
+                    (_) => widget.onSelected(value),
                   );
                 },
                 disabled: indexSelected != null,
                 awnser: widget.question.awnser[i],
                 isSelected: indexSelected == i,
               ),
-
-            // ...widget.question.awnser
-            //     .map(
-            //       (e) => AnserWidget(
-            //         title: e.title,
-            //         isRight: e.isRight,
-            //       ),
-            //     )
-            //     .toList(),
           ],
         ),
       ),

@@ -2,17 +2,20 @@ import 'package:dev_quiz/app/feature/challenge/components/next_button/next_butto
 import 'package:dev_quiz/app/feature/challenge/components/question_indicator.dart';
 import 'package:dev_quiz/app/feature/challenge/components/quiz/quiz.dart';
 import 'package:dev_quiz/app/feature/challenge/controller/challenge_controller.dart';
+import 'package:dev_quiz/app/feature/result/result_screen.dart';
 import 'package:dev_quiz/app/shared/models/question_model.dart';
 import 'package:dev_quiz/core/core.dart';
 import 'package:flutter/material.dart';
 
 class ChalengeScreen extends StatefulWidget {
-  ChalengeScreen({Key? key, required this.listQuestions}) : super(key: key);
+  ChalengeScreen({Key? key, required this.listQuestions, required this.title})
+      : super(key: key);
 
   @override
   _ChalengeScreenState createState() => _ChalengeScreenState();
 
   final List<QuestionModel> listQuestions;
+  final String title;
 }
 
 class _ChalengeScreenState extends State<ChalengeScreen> {
@@ -66,8 +69,9 @@ class _ChalengeScreenState extends State<ChalengeScreen> {
         children: widget.listQuestions
             .map(
               (question) => QuizWidget(
-                onChange: () {
+                onSelected: (value) {
                   nextPage;
+                  controller.setAnwserRight = true;
                 },
                 question: question,
               ),
@@ -96,7 +100,16 @@ class _ChalengeScreenState extends State<ChalengeScreen> {
                     child: NextButtonWidget.green(
                       label: "Confirmar",
                       onTap: () {
-                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ResultScreen(
+                              title: widget.title,
+                              length: widget.listQuestions.length,
+                              result: controller.qtdAnwserRight,
+                            ),
+                          ),
+                        );
                       },
                     ),
                   ),

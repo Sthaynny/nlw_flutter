@@ -67,6 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               MaterialPageRoute(
                                 builder: (context) => ChalengeScreen(
                                   listQuestions: e.questions,
+                                  title: e.title,
                                 ),
                               ),
                             );

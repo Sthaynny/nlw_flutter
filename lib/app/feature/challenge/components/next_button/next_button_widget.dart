@@ -26,6 +26,20 @@ class NextButtonWidget extends StatelessWidget {
         this.fontColor = AppColors.grey,
         this.borderColor = AppColors.border;
 
+  NextButtonWidget.purple({
+    required this.label,
+    required this.onTap,
+  })   : this.backgoundColor = AppColors.purple,
+        this.fontColor = AppColors.white,
+        this.borderColor = AppColors.purple;
+
+  NextButtonWidget.transparent({
+    required this.label,
+    required this.onTap,
+  })   : this.backgoundColor = Colors.transparent,
+        this.fontColor = AppColors.grey,
+        this.borderColor = Colors.transparent;
+
   final String label;
   final Color backgoundColor;
   final Color fontColor;
@@ -36,6 +50,7 @@ class NextButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 48,
+      width: double.maxFinite,
       child: TextButton(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
