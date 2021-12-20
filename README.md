@@ -1,24 +1,72 @@
-# nlw_flutter
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/46109133/123561796-e99b8000-d780-11eb-8d58-a46e9d82a2dd.png" alt="dt money" width="200"/>
+</p>
 
-A new Flutter project.
+<h1 align="center">NlW Flutter</h1>
 
-## Getting Started
+<p align="center">
+   <a href="https://www.linkedin.com/in/igor-sthaynny/">
+      <img alt="Igor Sthaynny" src="https://img.shields.io/badge/-Sthaynny-5965e0?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+  <img alt="Languages" src="https://img.shields.io/github/languages/count/Sthaynny/nlw_flutter?color=%235963C5" />
+  <img alt="lastcommit" src="https://img.shields.io/github/last-commit/Sthaynny/nlw_flutter?color=%235761C3" />
+  <img alt="License" src="https://img.shields.io/github/license/Sthaynny/nlw_flutter?color=%235E69D7" />
+  <img alt="Issues" src="https://img.shields.io/github/issues/Sthaynny/nlw_flutter?color=%235965E0">
+  <a href="mailto:igorsthaynny@gmail.com">
+   <img alt="E-mail" src="https://img.shields.io/badge/-igorsthaynny%40gmail.com-%23525DCB" />
+  </a>
+</p>
 
-This project is a starting point for a Flutter application.
+<p align="center">Project developed to study Flutter</p>
 
-A few resources to get you started if this is your first Flutter project:
+<hr />
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<div align="center">
+  <sub> Made with 💖 by
+    <a href="https://github.com/Sthaynny">Igor Sthaynny
+  </sub>
+</div>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# 📌 Contents
 
+- [📌 Contents](#-contents)
+- [:camera: Screenshots](#camera-screenshots)
+- [:rocket: Technologies](#rocket-technologies)
+- [:computer: How to run](#computer-how-to-run)
+- [:bug: Issues](#bug-issues)
+- [:sparkles: Contributing](#sparkles-contributing)
+- [:page_facing_up: License](#page_facing_up-license)
+
+# :camera: Screenshots
+N/A
+  
+
+
+# :rocket: Technologies
+This project was made using the follow technologies:
+
+
+# :computer: How to run
+
+```bash
+# Clone Repository
+$ git clone https://github.com/Sthaynny/nlw_flutter.git && cd base_app
+
+# Install Dependencies
+$ flutter pub get
+
+# Fill .env.local file with YOUR environment variables, according to .env.example file.
+
+# Run Aplication
+$ flutter run
+```
+Go to device or web to see the application running.
+
+# :bug: Issues
+
+Create a <a href="https://github.com/Sthaynny/nlw_flutter/issues">new issue report</a>, it will be an honor to be able to help you solve and further improve our application.
 
 # :sparkles: Contributing
-
-This project follows the Angular Convention commits pattern. [Click](./commitlint.config.js) to see the available prefixes.
 
 - Fork this repository;
 - Create a new branch to develop your feature: `git checkout -b my-feature`;
@@ -28,4 +76,4 @@ This project follows the Angular Convention commits pattern. [Click](./commitlin
 # :page_facing_up: License
 
 This project is under the [MIT License](./LICENSE) |
-Made with 💖 by [Igor Sthaynny](https://www.linkedin.com/in/Sthaynny/).
+Made with 💖 by [Igor Sthaynny](https://www.linkedin.com/in/igor-sthaynny/).
